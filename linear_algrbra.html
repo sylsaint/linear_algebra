@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2016-11-05 ÖÜÁù 14:04 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline6">1. Linear Algebra</a>
+<ul>
+<li>
+<ul>
+<li><a href="#orgheadline1">1.0.1. Structure</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline5">1.1. Chapter 1: Introduction to the Vectors</a>
+<ul>
+<li><a href="#orgheadline2">1.1.1. Vector additions and linear combinations</a></li>
+<li><a href="#orgheadline3">1.1.2. The dot product of <b>v</b> &sdot; <b>w</b> and the length || <b>v</b> || = \sqrt{*v* \cdot *v*}</a></li>
+<li><a href="#orgheadline4">1.1.3. Matrices A, linear equations Ax = b, solutins <b>x</b> = A<sup>-1</sup>b</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline6" class="outline-2">
+<h2 id="orgheadline6"><span class="section-number-2">1</span> Linear Algebra</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<b>Preface</b>
+</p>
+
+<p>
+The crucial operation in linear algebra  is  taking  <b>linear combinations  of  vectors</b>
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-shell">Ax = b
+</pre>
+</div>
+
+<p>
+how to solve it ? three levels:
+</p>
+
+<ol class="org-ol">
+<li>Direct solution by forward elimination and back substitution</li>
+<li>Matrix solution using inverse of A: x = A<sup>-1</sup>b (basis: A has an inverse)</li>
+<li>Vector space solution x = y + z: Particular solution  (to  Ay  =  b)  plus  nullspace solution  (to  Az  =  0)</li>
+</ol>
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-4">
+<h4 id="orgheadline1"><span class="section-number-4">1.0.1</span> Structure</h4>
+<div class="outline-text-4" id="text-1-0-1">
+<p>
+numbers  -&gt;  vectors  -&gt;  subspaces
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5"><span class="section-number-3">1.1</span> Chapter 1: Introduction to the Vectors</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+The heart of linear algegra lies in two operations: addition and multiply, which operates on vectors.
+</p>
+
+<ol class="org-ol">
+<li>addition: <b>v</b> + <b>w</b></li>
+<li>multiply: c <b>v</b>, d <b>w</b></li>
+<li>combinations: c <b>v</b> + d <b>w</b></li>
+</ol>
+
+<p>
+for two-dimensional vectors, their combinations fill the whole two-dimensional plane.
+</p>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-4">
+<h4 id="orgheadline2"><span class="section-number-4">1.1.1</span> Vector additions and linear combinations</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+DEFINITION  The sum of c <b>v</b> + d <b>w</b>  is a  linear combination of <b>v</b> and <b>w</b>
+</p>
+
+<ol class="org-ol">
+<li>What is the picture  of  all combinations c <b>u</b> ?</li>
+<li>What is the picture  of  all combinations c  <b>u</b>  +  d  <b>v</b> ?</li>
+<li>What is the picture  of  all combinations  c <b>u</b>  +  d <b>v</b>  +  e <b>w</b> ?</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline3" class="outline-4">
+<h4 id="orgheadline3"><span class="section-number-4">1.1.2</span> The dot product of <b>v</b> &sdot; <b>w</b> and the length || <b>v</b> || = \sqrt{*v* \cdot *v*}</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+DEFINITION The dot product or inner product of <b>v</b> = (v<sub>1</sub>, v<sub>2</sub>) and <b>w</b> = (w<sub>1</sub>, w<sub>2</sub>) is the number:
+<b>v</b> &sdot; <b>w</b> = v<sub>1</sub>*w<sub>1</sub> + v<sub>2</sub>*w<sub>2</sub>.
+</p>
+
+<p>
+Perpendicular Vectors: dot product is zero.
+</p>
+
+<p>
+Properties of dot product:
+</p>
+
+<ol class="org-ol">
+<li>commutative law: <b>v</b> &sdot; <b>w</b> = <b>w</b> &sdot; <b>v</b></li>
+<li>distributive law: <b>a</b> &sdot; (<b>b</b> + <b>c</b>) = <b>a</b> &sdot; <b>b</b> + <b>a</b> &sdot; <b>c</b></li>
+<li>bilinear: <b>a</b> &sdot; (&gamma; <b>b</b> + <b>c</b>) = &gamma; <b>a</b> &sdot; <b>b</b> + <b>a</b> &sdot; <b>c</b></li>
+<li>scalar multiplication (c<sub>1</sub> <b>a</b>) &sdot; (c<sub>2</sub> <b>b</b>) = c<sub>1</sub> c<sub>2</sub> <b>a</b> &sdot; <b>b</b></li>
+<li>orthogonal: <b>a</b> &sdot; <b>b</b> = 0</li>
+</ol>
+
+<p>
+Caution:
+</p>
+
+<ol class="org-ol">
+<li>Not associative: <b>a</b> \codt <b>b</b> &sdot; <b>c</b> is not right (think about it)</li>
+<li>No cancellation: <b>a</b> &sdot; <b>b</b> = <b>a</b> &sdot; <b>c</b> not &rArr; <b>b</b> = <b>c</b></li>
+</ol>
+
+<p>
+<b>Length And unit Vectors</b>
+</p>
+
+<p>
+DEFINITION The length of a vector <b>a</b> is \sqrt{*a* \cdot *a*}
+</p>
+
+<p>
+DEFINITION A unit vector <b>u</b> is a vector whose length is one, thus <b>u</b> &sdot; <b>u</b> = 1
+</p>
+
+<p>
+For any vector <b>v</b>, <b>v</b> / || <b>v</b> || is a unit vector(<b>v</b> is not a zero vector)
+</p>
+
+<p>
+Unit vectors <b>u</b> and <b>U</b> at angle &theta; have <b>u</b> &sdot; <b>U</b> = cos&theta;. Certainly | <b>u</b> &sdot; <b>U</b> | &le; 1.
+</p>
+
+<p>
+COSINE FORMULA: If <b>v</b> and <b>u</b> are nonzero vectors then <b>v</b> &sdot; <b>u</b> / || <b>v</b> || || <b>u</b> || = cos&theta;.
+</p>
+
+<p>
+SCHWARZ INEQUALITY: | <b>w</b> &sdot; <b>v</b> | &le; || <b>w</b> || * || <b>v</b> ||
+</p>
+
+<p>
+TRIANGLE INEQUALITY: || <b>w</b> + <b>v</b> || &le; || <b>w</b> || + || <b>v</b> ||
+</p>
+
+<p>
+<b>Besides</b>
+</p>
+
+<p>
+Cauchyâ€“Schwarz inequality:
+</p>
+
+<p>
+Background: The inequality for sums was published by Augustin-Louis Cauchy (1821),
+while the corresponding inequality for integrals was first proved by Viktor Bunyakovsky (1859).
+The modern proof of the integral inequality was given by Hermann Amandus Schwarz (1888)
+</p>
+
+<p>
+For all vectors <b>u</b> and <b>v</b> of an inner product space it is true that: || <b>u</b> &sdot; <b>v</b> ||<sup>2</sup> &le; || <b>u</b> ||<sup>2</sup> * || <b>v</b> ||<sup>2</sup>.
+</p>
+
+<p>
+Application: Analysis, Geometry, Probability theory
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline4" class="outline-4">
+<h4 id="orgheadline4"><span class="section-number-4">1.1.3</span> Matrices A, linear equations Ax = b, solutins <b>x</b> = A<sup>-1</sup>b</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+Combinations: c[1, -1, 0]<sup>T</sup> + d[0, 1, -1]<sup>T</sup> + e[0, 0, 1]<sup>T</sup> = [c, d-c, e-d]<sup>T</sup>. Now we transform it to matrice,
+vectors <b>u</b>, <b>v</b> and <b>w</b> go into the columns of matrix A:  (c, d, e) are the components of vector <b>x</b>.(think about it, why
+(c, d, e) are components of a vector <b>x</b>). See the picture below:
+</p>
+
+
+<div class="figure">
+<p><img src="1.3.png" alt="1.3.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="1.3.1.png" alt="1.3.1.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="1.3.2.png" alt="1.3.2.png" />
+</p>
+</div>
+
+<p>
+<b>Linear Equations</b>
+</p>
+
+<p>
+One more change in viewpoint is crucial,  Now we  think  of  b  as  known  and  we  look  for  x.
+</p>
+
+<p>
+Old question:  Compute the linear combination  x<sub>1</sub> <b>u</b>  +  x<sub>2</sub> <b>v</b>  +  x<sub>3</sub> <b>w</b>  to find  <b>b</b>.
+New question:  Which combination  of  <b>u</b>,  <b>v</b>,  <b>w</b>  produces a particular vector  <b>b</b>?
+</p>
+
+
+<div class="figure">
+<p><img src="1.3.3.png" alt="1.3.3.png" />
+</p>
+</div>
+
+<p>
+<b>The Inverse Matrix</b>
+</p>
+
+
+<div class="figure">
+<p><img src="1.3.4.png" alt="1.3.4.png" />
+</p>
+</div>
+
+<p>
+The  sum  matrix  S  in  equation  (7) is  the  inverse  of  the  difference  matrix  A.
+</p>
+
+<p>
+<b>Cyclic Differences</b>
+</p>
+
+
+<div class="figure">
+<p><img src="1.3.5.png" alt="1.3.5.png" />
+</p>
+</div>
+
+<p>
+This matrix C is  not  triangular.  It  is not so simple to solve for  x  when  we  are given  h.
+Actually it is impossible to find the solution to  ex  =  b,  because the three equations either
+have  infinitely many solutions  or  else  no solution.
+</p>
+
+<p>
+<b>Independence  and  Dependence</b>
+</p>
+
+<p>
+Independence: w  is  not in the plane  of  u  and  v.
+Dependence: w* is  in the plane  of  u  and  v.
+</p>
+
+
+<div class="figure">
+<p><img src="1.3.6.png" alt="1.3.6.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2016-11-05 ÖÜÁù 14:04</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>

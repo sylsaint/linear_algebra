@@ -1,0 +1,130 @@
+* Linear Algebra
+
+*Preface*
+
+The crucial operation in linear algebra  is  taking  *linear combinations  of  vectors*
+
+#+BEGIN_SRC shell
+
+Ax = b
+
+#+END_SRC
+
+how to solve it ? three levels:
+
+1. Direct solution by forward elimination and back substitution
+2. Matrix solution using inverse of A: x = A^{-1}b (basis: A has an inverse)
+3. Vector space solution x = y + z: Particular solution  (to  Ay  =  b)  plus  nullspace solution  (to  Az  =  0)
+
+*** Structure
+
+numbers  ->  vectors  ->  subspaces
+
+** Chapter 1: Introduction to the Vectors
+
+The heart of linear algegra lies in two operations: addition and multiply, which operates on vectors.
+
+    1. addition: *v* + *w*
+    2. multiply: c *v*, d *w*
+    3. combinations: c *v* + d *w*
+
+for two-dimensional vectors, their combinations fill the whole two-dimensional plane.
+
+*** Vector additions and linear combinations
+
+DEFINITION  The sum of c *v* + d *w*  is a  linear combination of *v* and *w*
+
+1.  What is the picture  of  all combinations c *u* ?
+2.  What is the picture  of  all combinations c  *u*  +  d  *v* ?
+3.  What is the picture  of  all combinations  c *u*  +  d *v*  +  e *w* ?
+
+*** The dot product of *v* \cdot *w* and the length || *v* || = \sqrt{*v* \cdot *v*}
+
+DEFINITION The dot product or inner product of *v* = (v_1, v_2) and *w* = (w_1, w_2) is the number:
+*v* \cdot *w* = v_1*w_1 + v_2*w_2.
+
+Perpendicular Vectors: dot product is zero.
+
+Properties of dot product:
+
+    1. commutative law: *v* \cdot *w* = *w* \cdot *v*
+    2. distributive law: *a* \cdot (*b* + *c*) = *a* \cdot *b* + *a* \cdot *c*
+    3. bilinear: *a* \cdot (\gamma *b* + *c*) = \gamma *a* \cdot *b* + *a* \cdot *c*
+    4. scalar multiplication (c_1 *a*) \cdot (c_2 *b*) = c_1 c_2 *a* \cdot *b*
+    5. orthogonal: *a* \cdot *b* = 0
+
+Caution:
+
+    1. Not associative: *a* \codt *b* \cdot *c* is not right (think about it)
+    2. No cancellation: *a* \cdot *b* = *a* \cdot *c* not \Rightarrow *b* = *c*
+
+*Length And unit Vectors*
+
+DEFINITION The length of a vector *a* is \sqrt{*a* \cdot *a*}
+
+DEFINITION A unit vector *u* is a vector whose length is one, thus *u* \cdot *u* = 1
+
+For any vector *v*, *v* / || *v* || is a unit vector(*v* is not a zero vector)
+
+Unit vectors *u* and *U* at angle \theta have *u* \cdot *U* = cos\theta. Certainly | *u* \cdot *U* | \le 1.
+
+COSINE FORMULA: If *v* and *u* are nonzero vectors then *v* \cdot *u* / || *v* || || *u* || = \cos\theta.
+
+SCHWARZ INEQUALITY: | *w* \cdot *v* | \le || *w* || * || *v* ||
+
+TRIANGLE INEQUALITY: || *w* + *v* || \le || *w* || + || *v* ||
+
+*Besides*
+
+Cauchy–Schwarz inequality:
+
+Background: The inequality for sums was published by Augustin-Louis Cauchy (1821),
+while the corresponding inequality for integrals was first proved by Viktor Bunyakovsky (1859).
+The modern proof of the integral inequality was given by Hermann Amandus Schwarz (1888)
+
+For all vectors *u* and *v* of an inner product space it is true that: || *u* \cdot *v* ||^2 \le || *u* ||^2 * || *v* ||^2.
+
+Application: Analysis, Geometry, Probability theory
+
+
+*** Matrices A, linear equations Ax = b, solutins *x* = A^{-1}b
+
+Combinations: c[1, -1, 0]^T + d[0, 1, -1]^T + e[0, 0, 1]^T = [c, d-c, e-d]^T. Now we transform it to matrice,
+vectors *u*, *v* and *w* go into the columns of matrix A:  (c, d, e) are the components of vector *x*.(think about it, why
+(c, d, e) are components of a vector *x*). See the picture below:
+
+[[file:1.3.png]]
+
+[[file:1.3.1.png]]
+
+[[file:1.3.2.png]]
+
+*Linear Equations*
+
+One more change in viewpoint is crucial,  Now we  think  of  b  as  known  and  we  look  for  x.
+
+Old question:  Compute the linear combination  x_1 *u*  +  x_2 *v*  +  x_3 *w*  to find  *b*.
+New question:  Which combination  of  *u*,  *v*,  *w*  produces a particular vector  *b*?
+
+[[file:1.3.3.png]]
+
+*The Inverse Matrix*
+
+[[file:1.3.4.png]]
+
+The  sum  matrix  S  in  equation  (7) is  the  inverse  of  the  difference  matrix  A.
+
+*Cyclic Differences*
+
+[[file:1.3.5.png]]
+
+This matrix C is  not  triangular.  It  is not so simple to solve for  x  when  we  are given  h.
+Actually it is impossible to find the solution to  ex  =  b,  because the three equations either
+have  infinitely many solutions  or  else  no solution.
+
+*Independence  and  Dependence*
+
+Independence: w  is  not in the plane  of  u  and  v.
+Dependence: w* is  in the plane  of  u  and  v.
+
+[[file:1.3.6.png]]
